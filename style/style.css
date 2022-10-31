@@ -594,6 +594,7 @@ body {
   line-height: 210%;
   text-align: center;
   width: 71px;
+  padding: 5px 10px;
 }
 .cart__content {
   grid-column: span 8;
