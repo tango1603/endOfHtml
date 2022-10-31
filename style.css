@@ -1,0 +1,310 @@
+/* Сброс стилей */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+
+/*Основные стили*/
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.header {
+    height: 100vh;
+    background: url(/img/background.jpg), #C4C4C4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 64px;
+}
+
+.top {}
+
+.menu-container {}
+
+.logo {}
+
+.input {
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    width: 288px;
+    height: 41px;
+}
+
+.input::placeholder {
+    padding: 11px 32px;
+}
+
+.menu {}
+
+.menu__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFF;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+.heading-big {
+    /*max-width: 760px;*/
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    margin: 64px 0 16px 0;
+    color: #FFF;
+}
+
+.slogan {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #FFF;
+}
+
+.catalog-link {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+.catalog-link:hover,
+.catalog-link:link,
+.catalog-link:visited {
+    text-decoration: underline;
+}
+
+.catalog-link--black {
+    color: #000;
+}
+
+
+.for {}
+
+.caption {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.for__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.for__item {
+    position: relative;
+    width: auto;
+}
+
+.for_caption {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.product-box {
+    margin-bottom: 39px;
+}
+
+.product-content {}
+
+.product {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #888888;
+    position: relative;
+}
+
+.pic_pox {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    text-align: right;
+}
+
+.subtitle {
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.new-price {
+    color: #050505;
+}
+
+.old-price {
+    text-decoration-line: line-through;
+}
+
+.link-box {
+    margin-bottom: 64px;
+}
+
+.footer {
+    background: #F7F6F6;
+    width: 100%;
+}
+
+.footer__content {}
+
+.footer__logo {}
+
+.footer__info {}
+
+.footer__item {}
+
+
+
+.link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    text-decoration: none;
+}
+
+.footer__content {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer__heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.footer__icons {}
+
+.footer__form {}
+
+.form-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.form-input {
+    width: 275px;
+    height: 46px;
+
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 20px;
+}
+
+.form-input::placeholder {
+    padding: 12px 25px;
+    color: #C4C4C4;
+}
+
+.button {
+    width: 275px;
+    height: 46px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 20px;
+    font-weight: 400;
+}
