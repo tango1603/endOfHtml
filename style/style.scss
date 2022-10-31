@@ -1,0 +1,475 @@
+/*Переменные*/
+@import "vars";
+
+/* Сброс стилей */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  &,
+  &::before,
+  ::after {
+    box-sizing: border-box;
+  }
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/*Основные стили*/
+body {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.center {
+  padding-left: calc(50% - $pc-site/2);
+  padding-right: calc(50% - $pc-site/2);
+}
+
+.header {
+  height: 735px;
+  background: url(../img/background.jpg), #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: $big-space;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+  padding: 18px 0;
+
+  &__input {
+    border: 1px solid $color-text;
+    border-radius: 20px;
+    width: 288px;
+    height: 41px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 5px 20px;
+
+    &::placeholder {
+      padding: 11px $gap;
+    }
+
+    &:focus {
+      color: #212529;
+      background-color: #fff;
+      border-color: #bdbdbd;
+      outline: 0;
+    }
+  }
+
+  &__link {
+    line-height: 20px;
+    color: $color-text;
+    transition: all 0.5s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.menu-box {
+  display: flex;
+  gap: $gap;
+}
+.menu-mob {
+  display: none;
+}
+
+.top__title {
+  max-width: 792px;
+  font-weight: 600;
+  font-size: $big-space;
+  line-height: 70px;
+  margin: $big-space 0 16px 0;
+  color: $color-text;
+}
+
+.top__slogan {
+  font-size: 24px;
+  line-height: $gap;
+  margin-bottom: 16px;
+  color: $color-text;
+}
+
+.catalog-link {
+  line-height: 24px;
+  color: $color-text;
+  transition: all 0.5s;
+  &:hover,
+  &:visited {
+    text-decoration: underline;
+  }
+
+  &--black {
+    color: #000;
+  }
+}
+
+.for {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__item {
+    height: 415px;
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 5px #c4c4c4;
+    }
+  }
+
+  &__item_1 {
+    background-image: url(../img/for_vacation.jpg);
+  }
+
+  &__item_2 {
+    background-image: url(../img/for_work.jpg);
+  }
+
+  &__item_3 {
+    background-image: url(../img/for_kitchen.jpg);
+  }
+
+  &__item_4 {
+    background-image: url(../img/for_child.jpg);
+  }
+
+  &__item_5 {
+    background-image: url(../img/for_bath.jpg);
+  }
+
+  &__img--big {
+    grid-column: span 6;
+  }
+}
+
+.caption {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  color: #000;
+  margin-bottom: $gap;
+}
+
+.for-box {
+  margin-bottom: $big-space;
+}
+
+.for__caption {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: $color-text;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.product-box {
+  margin-bottom: 39px;
+}
+
+.product-content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: $gap;
+  row-gap: 56px;
+}
+
+.product {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #888;
+  position: relative;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #c4c4c4;
+  }
+}
+
+.product-img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.pic-box {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  left: 80%;
+  text-align: right;
+  width: 15%;
+
+  &__buy,
+  &__like {
+    fill: #c4c4c4;
+    transition: all 0.5s;
+  }
+  &__buy:hover {
+    fill: rgb(250, 171, 2);
+  }
+  &__like:hover {
+    fill: rgb(250, 2, 2);
+  }
+}
+
+.subtitle {
+  display: block;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 12px;
+  max-width: 379px;
+}
+
+.price-box {
+  display: flex;
+  gap: $gap;
+}
+
+.new-price {
+  color: #050505;
+  margin-bottom: 5px;
+}
+
+.old-price {
+  text-decoration-line: line-through;
+}
+
+.link-box {
+  margin-top: 39px;
+  margin-bottom: $big-space;
+}
+
+.footer {
+  background: #f7f6f6;
+  width: 100%;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__info {
+    display: flex;
+    gap: 129px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__content {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: $gap 0 40px 0;
+  }
+
+  &__heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+    margin-bottom: 12px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+  }
+
+  &__svg {
+    fill: #888;
+    transition: fill 0.5s;
+  }
+
+  &__svg:hover {
+    fill: #000;
+  }
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #888;
+  text-decoration: none;
+  transition: fill 0.5s;
+  &:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-text {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.form-input {
+  width: 275px;
+  height: 46px;
+  margin: 16px 0 12px 0;
+  background: $color-text;
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+
+  display: block;
+  padding: 5px 20px;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &::placeholder {
+    padding: 12px 25px;
+    color: #c4c4c4;
+  }
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  }
+}
+
+.button {
+  width: 275px;
+  height: 46px;
+  background: rgba(222, 215, 215, 0.41);
+  border: 1px solid #ffffff;
+  color: #000000;
+  border-radius: 20px;
+  transition: all 0.5s;
+  &:hover {
+    background: #000;
+    color: $color-text;
+  }
+}
+
+/*стили для страниц сайта*/
+
+@import "catalog";
+@import "cart";
+@import "adaptive";

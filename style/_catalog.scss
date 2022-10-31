@@ -1,0 +1,57 @@
+.header--catalog {
+  height: 400px;
+  background: url(../img/bg_catalog.jpg), #c4c4c4;
+}
+
+.crumbs-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 41px;
+  line-height: $gap;
+}
+.main-link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #888888;
+  transition: all 0.5s;
+  &:hover {
+    text-decoration: underline;
+    color: #000000;
+  }
+}
+
+.top__title--catalog {
+  margin-top: 127px;
+}
+
+.crumbs::after {
+  content: " / Каталог";
+  width: auto;
+  display: inline;
+}
+
+.order-list {
+  background-color: transparent;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  z-index: 1;
+
+  width: 288px;
+  height: 41px;
+  padding: 0px 14px;
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+
+  display: grid;
+  grid-template-areas: "select";
+  grid-area: select;
+  align-items: center;
+}
